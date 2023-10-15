@@ -1,0 +1,47 @@
+.film-productions {
+  height: auto;
+  padding-top: 3vh;
+  width: 100%;
+  display: block;
+  padding-bottom: 10vh;
+  .row-film {
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 5vh;
+    justify-content: space-between;
+  }
+  & a {
+    width: 90%;
+    text-decoration: none;
+    color: black;
+    .film-box {
+      display: block;
+      text-align: center;
+      width: 100%;
+
+      .film-img {
+        width: 100%;
+      }
+      & img {
+        width: 90%;
+      }
+      .film-title {
+        padding-top: 1vh;
+        font-size: 1.5rem;
+      }
+      .film-button {
+        padding-top: 2vh;
+      }
+      & a {
+        background-color: #e4c22a;
+        color: black;
+        font-size: 1rem;
+        padding: 10px 40px;
+        border: #e4c22a;
+        border-radius: 25px;
+        cursor: pointer;
+      }
+    }
+  }
+}

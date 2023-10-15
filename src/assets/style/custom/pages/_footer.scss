@@ -1,0 +1,104 @@
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #191a1c;
+  color: white;
+  padding-top: 10vh;
+  .footer-page {
+    display: flex;
+
+    .footer-left {
+      width: 50%;
+      margin-left: 5%;
+      .register-login {
+        color: white;
+        font-weight: lighter;
+        padding-top: 1vh;
+        font-size: 2rem;
+      }
+
+      .register-input {
+        padding-top: 1.5vh;
+        color: white;
+        width: 70%;
+      }
+      & input {
+        background-color: transparent;
+        border: solid 0.5px white;
+        padding-top: 8px;
+        color: white;
+        width: 100%;
+
+        font-family: "Montserrat";
+
+        padding-bottom: 8px;
+        padding-left: 4px;
+      }
+      & input::placeholder {
+        color: white;
+      }
+
+      .register-button {
+        padding-top: 1.5vh;
+        text-align: left;
+      }
+      & button {
+        color: white;
+        border: none;
+        background: none;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    .footer-content {
+      position: relative;
+      margin-right: 10%;
+      text-align: right;
+      width: 50%;
+      .footer-logo {
+        height: 3rem;
+        text-align: right;
+      }
+
+      .footer-text {
+        padding-top: 4vh;
+      }
+      .footer-media {
+        display: flex;
+        width: 50%;
+        margin-left: 50%;
+        text-align: right;
+        padding-top: 4vh;
+        justify-content: space-between;
+      }
+    }
+  }
+  .footer-copyright {
+    width: 100%;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .footer {
+    .footer-left {
+      margin-top: -4vh;
+      height: 58vh;
+    }
+
+    .footer-content {
+      margin-right: 5%;
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .footer {
+    .footer-left {
+      margin-top: -3vh;
+      height: 53vh;
+    }
+  }
+}

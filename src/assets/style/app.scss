@@ -1,0 +1,19 @@
+@import "variables";
+
+/* Pages */
+// 1. Dashbard
+@import "custom/pages/dashboards";
+// 2. Products
+@import "custom/pages/products.scss";
+// 3. AboutUs
+@import "custom/pages/aboutUs.scss";
+// 4. Contact
+@import "custom/pages/contact.scss";
+// 5. Register
+@import "custom/pages/register.scss";
+@import "custom/pages/footer.scss";
+@import "custom/pages/projects.scss";
+@import "custom/pages/filmProductions.scss";
+/* Components */
+// 1. Header
+@import "custom/components/header";

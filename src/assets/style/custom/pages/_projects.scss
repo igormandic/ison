@@ -1,0 +1,36 @@
+.projects {
+  width: 100%;
+  .projects-all-page {
+    display: block;
+    width: 100%;
+    padding-top: 15vh;
+    .projects-title {
+      font-weight: bold;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .projects-menu {
+      position: relative;
+      display: flex;
+      margin-left: 10%;
+      justify-content: space-between;
+      height: 5vh;
+      padding-top: 5vh;
+      color: black;
+      width: 80%;
+      height: auto;
+    }
+    & a {
+      text-decoration: none;
+      width: 50%;
+      font-size: 1.5rem;
+      color: black;
+      .projects-tab {
+        text-align: center;
+      }
+      #selected {
+        font-weight: bold;
+      }
+    }
+  }
+}
