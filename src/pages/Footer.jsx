@@ -31,14 +31,14 @@ const Footer = () => {
             alt="ison logo"
           />
           <div className="footer-media">
-            <a href="https://www.instagram.com">
-              <FontAwesomeIcon icon={faInstagram} color="white" size="4x" />
+            <a href="https://www.instagram.com/ison_film/ ">
+              <FontAwesomeIcon icon={faInstagram} color="white" size="3x" />
             </a>
-            <a href="https://www.facebook.com">
-              <FontAwesomeIcon icon={faFacebook} color="white" size="4x" />
+            <a href="https://www.facebook.com/profile.php?id=61552144662009">
+              <FontAwesomeIcon icon={faFacebook} color="white" size="3x" />
             </a>
-            <a href="https://www.youtube.com">
-              <FontAwesomeIcon icon={faYoutube} color="white" size="4x" />
+            <a href="https://www.youtube.com/@isonfilm">
+              <FontAwesomeIcon icon={faYoutube} color="white" size="3x" />
             </a>
           </div>
           <div className="footer-text">

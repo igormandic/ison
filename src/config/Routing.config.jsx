@@ -3,14 +3,17 @@ import MainPage from "../pages/MainPage";
 import Contact from "../pages/Contact";
 import AboutUs from "../pages/AboutUs";
 import Projects from "../pages/Projects";
-import VideoMusicMedia from "../pages/VideoMusicMedia";
+import FilmDetails from "../pages/FilmDetails";
+import Tracak from "../pages/Tracak";
 
 export const ERoutes = {
   MainPage: "/",
   AboutUs: "/about-us",
   Contact: "/contact",
   Projects: "/projects",
-  VideoMusicMedia: "/brand-video-music",
+  BrandVideoMusic: "/brand-video-music",
+  MFP: "/mfp",
+  Tracak: "/tracak",
   Anything: "*",
 };
 
@@ -18,7 +21,9 @@ export const router = createBrowserRouter([
   { path: ERoutes.MainPage, element: <MainPage /> },
   { path: ERoutes.AboutUs, element: <AboutUs /> },
   { path: ERoutes.Contact, element: <Contact /> },
-  { path: ERoutes.Projects, element: <Projects /> },
-  { path: ERoutes.VideoMusicMedia, element: <VideoMusicMedia /> },
+  { path: ERoutes.Projects, element: <Projects propsIsFilm={true} /> },
+  { path: ERoutes.BrandVideoMusic, element: <Projects propsIsFilm={false} /> },
+  { path: ERoutes.MFP, element: <FilmDetails /> },
+  { path: ERoutes.Tracak, element: <Tracak /> },
   { path: ERoutes.Anything, element: <MainPage /> },
 ]);

@@ -1,0 +1,85 @@
+.film-details {
+  width: 100%;
+  .film-details-all-page {
+    display: block;
+    width: 100%;
+    padding-top: 0;
+
+    .film-details-img {
+      width: 100%;
+    }
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .film-details-menu {
+      position: relative;
+      display: flex;
+      margin-left: 10%;
+      justify-content: space-between;
+      height: 5vh;
+      padding-top: 5vh;
+      color: black;
+      width: 80%;
+      height: auto;
+    }
+    & button {
+      cursor: pointer;
+      text-decoration: none;
+      background: none;
+      border: none;
+      width: 50%;
+      font-size: 1.5rem;
+      color: black;
+      .film-details-tab {
+        text-align: center;
+      }
+      #selected {
+        font-weight: bold;
+      }
+    }
+    .film-trailer {
+      display: block;
+      padding-bottom: 10vh;
+      .film-details-title {
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: left;
+        padding-top: 5vh;
+        width: 40%;
+        margin-left: 10%;
+      }
+      .film-details-video {
+        padding-top: 6vh;
+        width: 80%;
+        margin-left: 10%;
+        .film-video {
+          width: 100%;
+        }
+      }
+
+      .film-details-text {
+        padding-top: 5vh;
+        width: 40%;
+        margin-left: 10%;
+        font-size: 1.5rem;
+        text-align: justify;
+      }
+
+      .row-img {
+        display: flex;
+        width: 80%;
+        margin-left: 10%;
+        padding-top: 5vh;
+        justify-content: space-between;
+        .film-img {
+          width: 100%;
+        }
+        & img {
+          width: 90%;
+        }
+      }
+    }
+  }
+}

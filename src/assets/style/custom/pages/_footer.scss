@@ -8,7 +8,7 @@
     display: flex;
 
     .footer-left {
-      width: 50%;
+      width: 70%;
       margin-left: 5%;
       .register-login {
         color: white;
@@ -20,7 +20,7 @@
       .register-input {
         padding-top: 1.5vh;
         color: white;
-        width: 70%;
+        width: 60%;
       }
       & input {
         background-color: transparent;
@@ -55,7 +55,7 @@
       position: relative;
       margin-right: 10%;
       text-align: right;
-      width: 50%;
+      width: 30%;
       .footer-logo {
         height: 3rem;
         text-align: right;

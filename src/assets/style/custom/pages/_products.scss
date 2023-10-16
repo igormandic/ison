@@ -16,6 +16,14 @@
     margin-left: 10vw;
     padding-top: 4rem;
     text-align: left;
+
+    .img-div {
+      width: 100%;
+    }
+    & img {
+      text-align: center;
+      width: 20%;
+    }
   }
 
   .products-images a {

@@ -1,4 +1,4 @@
-const Film = ({ img, title }) => {
+const Film = ({ img, title, url }) => {
   return (
     <a href="/film-details">
       <div className="film-box">
@@ -7,7 +7,7 @@ const Film = ({ img, title }) => {
         </div>
         <div className="film-title">{title}</div>
         <div className="film-button">
-          <a href="/film-details">Više</a>
+          <a href={url}>Više</a>
         </div>
       </div>
     </a>

@@ -4,6 +4,9 @@ const Products = () => {
       <div className="products-title">NAŠE USLUGE</div>
       <div className="products-images">
         <div className="product-image">
+          <div className="img-div">
+            <img src="/images/content.png" alt="content" />
+          </div>
           <div className="product-title">Content Development</div>
           <div className="product-subtitle">
             Kreativni tim naše produkcije je u svom najboljem izdanju kada
@@ -17,6 +20,9 @@ const Products = () => {
         </div>
 
         <div className="product-image">
+          <div className="img-div">
+            <img src="/images/film.png" alt="content" />
+          </div>
           <div className="product-title">Film & TV Productions</div>
           <div className="product-subtitle">
             Primarna delatnost Ison film produkcije je realizacija filmskih i TV
@@ -31,6 +37,9 @@ const Products = () => {
         </div>
 
         <div className="product-image">
+          <div className="img-div">
+            <img src="/images/brand.png" alt="content" />
+          </div>
           <div className="product-title">Brand video / Music video</div>
           <div className="product-subtitle">
             Mi razumemo moć vizuelne naracije. Bilo da je to produkt video,
