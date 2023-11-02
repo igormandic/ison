@@ -14,7 +14,7 @@
   & a {
     width: 90%;
     text-decoration: none;
-    color: black;
+    color: white;
     .film-box {
       display: block;
       text-align: center;
@@ -35,12 +35,27 @@
       }
       & a {
         background-color: #e4c22a;
-        color: black;
+        color: white;
+        font-weight: bold;
         font-size: 1rem;
         padding: 10px 40px;
         border: #e4c22a;
         border-radius: 25px;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .film-productions {
+    .row-film {
+      display: block;
+      padding-top: 0vh;
+    }
+    & a {
+      .film-box {
+        padding-bottom: 4vh;
       }
     }
   }

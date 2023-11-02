@@ -3,8 +3,11 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Film from "./Film";
 import Footer from "./Footer";
+import { useTranslation } from "react-i18next";
 
 const Projects = ({ propsIsFilm }) => {
+  const { t } = useTranslation();
+
   const [isFilm, setFilm] = useState(true);
   useEffect(() => {
     if (propsIsFilm || propsIsFilm === false) {
@@ -22,7 +25,7 @@ const Projects = ({ propsIsFilm }) => {
     <div className="projects" id="projects">
       <Header />
       <div className="projects-all-page">
-        <div className="projects-title">Projekti</div>
+        <div className="projects-title">{t("projects")}</div>
         <div className="projects-menu">
           <button onClick={() => showFilm(true)}>
             <div className="projects-tab" id={isFilm ? "selected" : ""}>
@@ -39,50 +42,48 @@ const Projects = ({ propsIsFilm }) => {
           <div className="film-productions" id="film-productions">
             <div className="row-film">
               <Film
-                img={"/images/filmovi/actorslife.jpg"}
-                title={"Actorslife (2023.)"}
-                url="#"
+                img={"/images/filmovi/mfp.jpg"}
+                title={"M.F.P."}
+                url="/mfp"
               />
               <Film
-                img={"/images/filmovi/proba.jpg"}
-                title={"Proba (2023.)"}
-                url="#"
+                img={"/images/filmovi/tracak.jpg"}
+                title={"Tračak"}
+                url="/tracak"
               />
+
               <Film
                 img={"/images/filmovi/svetac.jpg"}
-                title={"Svetac (2023.)"}
+                title={"Svetac"}
                 url="#"
               />
             </div>
 
             <div className="row-film">
               <Film
-                img={"/images/filmovi/mfp.jpg"}
-                title={"Moje omiljeno mesto u 36h (2022.)"}
-                url="/mfp"
-              />
-              <Film
                 img={"/images/filmovi/mrsWhite.jpg"}
-                title={"Mrs White (2022.)"}
+                title={"Mrs White"}
                 url="#"
               />
               <Film
-                img={"/images/filmovi/tracak.jpg"}
-                title={"Tracak (2023.)"}
+                img={"/images/filmovi/actorslife.jpg"}
+                title={"Actorslife"}
                 url="#"
               />
+              <Film img={"/images/filmovi/proba.jpg"} title={"Proba"} url="#" />
             </div>
           </div>
         ) : (
           <div className="film-productions" id="film-productions">
             <div className="row-film">
               <Film
-                img={"/images/reklame/vladaMaricicTrio.jpg"}
-                title={"Vlada Maricic Trio"}
+                img={"/images/reklame/whoops.jpg"}
+                title={"Whoops"}
+                url="/whoops"
               />
               <Film
-                img={"/images/reklame/whoops.jpg"}
-                title={"Whoops (2023.)"}
+                img={"/images/reklame/vladaMaricicTrio.jpg"}
+                title={"Vlada Maričić Trio"}
               />
             </div>
           </div>

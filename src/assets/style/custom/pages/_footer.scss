@@ -1,14 +1,16 @@
 .footer {
   width: 100%;
   height: auto;
-  background-color: #191a1c;
+  background-color: black;
   color: white;
   padding-top: 10vh;
   .footer-page {
     display: flex;
-
+    .footer-logo-phone {
+      display: none;
+    }
     .footer-left {
-      width: 70%;
+      width: 50%;
       margin-left: 5%;
       .register-login {
         color: white;
@@ -20,7 +22,7 @@
       .register-input {
         padding-top: 1.5vh;
         color: white;
-        width: 60%;
+        width: 90%;
       }
       & input {
         background-color: transparent;
@@ -55,7 +57,7 @@
       position: relative;
       margin-right: 10%;
       text-align: right;
-      width: 30%;
+      width: 50%;
       .footer-logo {
         height: 3rem;
         text-align: right;
@@ -81,24 +83,59 @@
     padding-bottom: 5vh;
   }
 }
-@media only screen and (max-width: 1150px) {
-  .footer {
-    .footer-left {
-      margin-top: -4vh;
-      height: 58vh;
-    }
 
-    .footer-content {
-      margin-right: 5%;
+@media only screen and (max-width: 1000px) {
+  .footer {
+    .footer-page {
+      .footer-left {
+        width: 55%;
+      }
+      .footer-content {
+        width: 45%;
+        .footer-media {
+          margin-left: 40%;
+          width: 60%;
+        }
+      }
     }
   }
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 650px) {
   .footer {
-    .footer-left {
-      margin-top: -3vh;
-      height: 53vh;
+    padding-top: 5vh;
+
+    .footer-page {
+      .footer-logo-phone {
+        display: block;
+        width: 100%;
+        padding-bottom: 1vh;
+      }
+      & img {
+        text-align: center;
+        width: 50%;
+        margin-left: 5%;
+      }
+      display: block;
+      .footer-left {
+        width: 90%;
+      }
+      .footer-content {
+        padding-top: 3vh;
+        width: 90%;
+        text-align: left;
+        margin-left: 5%;
+        .footer-logo {
+          display: none;
+        }
+        .footer-media {
+          margin-left: 5%;
+          width: 90%;
+        }
+        .footer-text {
+          display: none;
+        }
+      }
     }
   }
 }

@@ -1,0 +1,23 @@
+.modal-close {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  width: 100%;
+  text-align: end;
+  padding-top: 10px;
+  z-index: 1;
+
+  & span {
+    cursor: pointer;
+  }
+}
+.image-slider {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  .rsis-image {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+  }
+}

@@ -1,5 +1,7 @@
 .projects {
   width: 100%;
+  color: $white;
+  background-color: #191a1c;
   .projects-all-page {
     display: block;
     width: 100%;
@@ -16,7 +18,7 @@
       justify-content: space-between;
       height: 5vh;
       padding-top: 5vh;
-      color: black;
+      color: white;
       width: 80%;
       height: auto;
     }
@@ -27,13 +29,30 @@
       border: none;
       width: 50%;
       font-size: 1.5rem;
-      color: black;
+      color: white;
       .projects-tab {
         text-align: center;
       }
       #selected {
         font-weight: bold;
+        border-bottom: 3px solid;
+        border-color: #e4c22a;
       }
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .projects {
+    .projects-all-page {
+      padding-top: 20vh;
+    }
+  }
+}
+
+@media only screen and (max-height: 430px) {
+  .projects {
+    .projects-all-page {
+      padding-top: 30vh;
     }
   }
 }

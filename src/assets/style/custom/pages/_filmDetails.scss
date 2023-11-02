@@ -1,5 +1,7 @@
 .film-details {
   width: 100%;
+  background-color: #191a1c;
+  color: $white;
   .film-details-all-page {
     display: block;
     width: 100%;
@@ -7,6 +9,7 @@
 
     .film-details-img {
       width: 100%;
+      padding-top: 4rem;
     }
     & img {
       width: 100%;
@@ -20,9 +23,14 @@
       justify-content: space-between;
       height: 5vh;
       padding-top: 5vh;
-      color: black;
+      color: $white;
       width: 80%;
       height: auto;
+      #selected {
+        font-weight: bold;
+        border-bottom: 3px solid;
+        border-color: #e4c22a;
+      }
     }
     & button {
       cursor: pointer;
@@ -31,7 +39,7 @@
       border: none;
       width: 50%;
       font-size: 1.5rem;
-      color: black;
+      color: $white;
       .film-details-tab {
         text-align: center;
       }
@@ -57,6 +65,19 @@
         .film-video {
           width: 100%;
         }
+
+        #tracak-video {
+          height: 60vh;
+        }
+      }
+      .img-mfp-trailer {
+        width: 80%;
+        margin-left: 10%;
+        text-align: right;
+        padding-top: 3vh;
+      }
+      & img {
+        width: 30%;
       }
 
       .film-details-text {
@@ -77,7 +98,50 @@
           width: 100%;
         }
         & img {
+          cursor: pointer;
           width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .film-details {
+    .film-details-all-page {
+      .details-img-mfp {
+        padding-top: 8vh;
+      }
+      .film-details-img {
+        padding-top: 3vh;
+      }
+      #tracak-details-image {
+        padding-top: 8vh;
+      }
+      .film-trailer {
+        padding-top: 3vh;
+        .film-details-title {
+          font-size: 1.5rem;
+          width: 80%;
+        }
+        .film-details-text {
+          width: 80%;
+          margin-left: 10%;
+          font-size: 1rem;
+          text-align: justify;
+        }
+        .row-img {
+          display: block;
+          width: 80%;
+          margin-left: 10%;
+          padding-top: 0%;
+          .film-img {
+            width: 100%;
+            padding-bottom: 1vh;
+          }
+          & img {
+            width: 100%;
+          }
         }
       }
     }

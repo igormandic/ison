@@ -1,30 +1,59 @@
 import { useState } from "react";
 import Header from "../components/Header";
+import ModalComponent from "../components/Modal";
 import Footer from "./Footer";
+import { useTranslation } from "react-i18next";
 
+let images = [
+  "/images/filmovi/mfp/1.jpg",
+  "/images/filmovi/mfp/2.jpg",
+  "/images/filmovi/mfp/3.jpg",
+  "/images/filmovi/mfp/4.jpg",
+  "/images/filmovi/mfp/5.jpg",
+  "/images/filmovi/mfp/6.jpg",
+  "/images/filmovi/mfp/7.jpg",
+  "/images/filmovi/mfp/8.jpg",
+];
 const FilmDetails = () => {
-  const [isImage, setImage] = useState(false);
+  const { t } = useTranslation();
 
+  const [isImage, setImage] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  let innerWidth = window.innerWidth;
   const showImage = (tab) => {
     setImage(tab);
   };
+  const onClick = () => {
+    setShowModal(true);
+  };
 
+  const handleClose = () => {
+    setShowModal(false);
+  };
   return (
     <div className="film-details" id="film-details">
       <Header />
       <div className="film-details-all-page">
         <div className="film-details-img">
-          <img src="/images/filmovi/mfp/1.png" alt="mfp" />
+          <img
+            src={
+              innerWidth > 600
+                ? "/images/filmovi/mfp/glavna.jpg"
+                : "/images/filmovi/mfp/glavna_phone.jpg"
+            }
+            alt="mfp"
+            className="details-img-mfp"
+          />
         </div>
         <div className="film-details-menu">
           <button onClick={() => showImage(false)}>
             <div className="film-details-tab" id={!isImage ? "selected" : ""}>
-              Trailer & more
+              Trailer
             </div>
           </button>
           <button onClick={() => showImage(true)}>
             <div className="film-details-tab" id={isImage ? "selected" : ""}>
-              Galerija
+              {t("galerija")}
             </div>
           </button>
         </div>
@@ -39,53 +68,90 @@ const FilmDetails = () => {
                 />
               </video>
             </div>
-            <div className="film-details-title">Moje omiljeno mesto u 36h</div>
-            <div className="film-details-text">
-              Kratki film koji je osvojio drugo mesto na regionalnom takmicenju
-              Create your film. Postoje zavisnosti u savremenom dobu, kojima
-              nije dato dovoljno pažnje. Ako se izmaknu kontroli, pojedincu mogu
-              stvoriti brojne posledice.
+            <div className="img-mfp-trailer">
+              <img src="/partneri/partner2.jpg" alt="ison mfp" />
             </div>
           </div>
         ) : (
           <div className="film-trailer">
             <div className="row-img">
               <div className="film-img">
-                <img src="/images/filmovi/mfp/1.png" alt="ison mfp" />
+                <img
+                  src="/images/filmovi/mfp/1.jpg"
+                  alt="ison mfp"
+                  onClick={() => onClick()}
+                />
               </div>
               <div className="film-img">
-                <img src="/images/filmovi/mfp/2.png" alt="ison mfp" />
+                <img
+                  src="/images/filmovi/mfp/2.jpg"
+                  alt="ison mfp"
+                  onClick={() => onClick()}
+                />
               </div>
               <div className="film-img">
-                <img src="/images/filmovi/mfp/3.png" alt="ison mfp" />
+                <img
+                  src="/images/filmovi/mfp/3.jpg"
+                  alt="ison mfp"
+                  onClick={() => onClick()}
+                />
               </div>
             </div>
 
             <div className="row-img">
               <div className="film-img">
-                <img src="/images/filmovi/mfp/4.png" alt="ison mfp" />
+                <img
+                  src="/images/filmovi/mfp/4.jpg"
+                  alt="ison mfp"
+                  onClick={() => onClick()}
+                />
               </div>
               <div className="film-img">
-                <img src="/images/filmovi/mfp/5.png" alt="ison mfp" />
+                <img
+                  src="/images/filmovi/mfp/5.jpg"
+                  alt="ison mfp"
+                  onClick={() => onClick()}
+                />
               </div>
               <div className="film-img">
-                <img src="/images/filmovi/mfp/6.png" alt="ison mfp" />
+                <img
+                  src="/images/filmovi/mfp/6.jpg"
+                  alt="ison mfp"
+                  onClick={() => onClick()}
+                />
               </div>
             </div>
 
             <div className="row-img">
               <div className="film-img">
-                <img src="/images/filmovi/mfp/7.png" alt="ison mfp" />
+                <img
+                  src="/images/filmovi/mfp/7.jpg"
+                  alt="ison mfp"
+                  onClick={() => onClick()}
+                />
               </div>
               <div className="film-img">
-                <img src="/images/filmovi/mfp/8.png" alt="ison mfp" />
+                <img
+                  src="/images/filmovi/mfp/8.jpg"
+                  alt="ison mfp"
+                  onClick={() => onClick()}
+                />
               </div>
               <div className="film-img">
-                <img src="/images/filmovi/mfp/9.png" alt="ison mfp" />
+                <img
+                  src="/images/filmovi/mfp/9.jpg"
+                  alt="ison mfp"
+                  onClick={() => onClick()}
+                />
               </div>
             </div>
           </div>
         )}
+        <ModalComponent
+          show={showModal}
+          handleClose={handleClose}
+          images={images}
+        />
       </div>
 
       <Footer />

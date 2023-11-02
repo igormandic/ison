@@ -2,18 +2,32 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { VscClose } from "react-icons/vsc";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { scroller } from "react-scroll";
 
 const EHeader = {
-  Homepage: "Početna",
-  AboutUs: "O Nama",
-  Projects: "Projekti",
-  Contact: "Kontakt",
+  Homepage: "homepage",
+  AboutUs: "aboutUs",
+  Projects: "projects",
+  Contact: "contact",
 };
 
 const Header = () => {
-  const { t } = useTranslation();
   const [header, setHeader] = useState("header-top");
   const [openNavigation, setOpenNavigation] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const onChangeLanguage = (language) => {
+    localStorage.setItem("language", language);
+    i18n.changeLanguage(language);
+  };
+
+  const onChangePage = (route) => {
+    scroller.scrollTo(route, {
+      duration: 1000,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
 
   const listenScrollEvent = () => {
     if (window.scrollY < 100) {
@@ -50,15 +64,35 @@ const Header = () => {
           <div>
             <a href="/projects">{t(EHeader.Projects)}</a>
           </div>
-          <div>
-            <a href="/#contact">{t(EHeader.Contact)}</a>
+          <div onClick={() => onChangePage("contact")} key={"contact"}>
+            <div className="contact-header">{t(EHeader.Contact)}</div>
+          </div>
+        </div>
+        <div className="header-language">
+          <div className="header-img-lg">
+            <button
+              className="header-lg-button"
+              onClick={() => onChangeLanguage("rs")}
+            >
+              <img src="/images/serbian_logo.png" alt="Ison Homepage" />
+            </button>
+          </div>
+          <div className="header-img-lg">
+            <button
+              className="header-lg-button"
+              onClick={() => onChangeLanguage("en")}
+            >
+              <img src="/images/england_logo.png" alt="Ison Homepage" />
+            </button>
           </div>
         </div>
       </div>
 
       <div className={`${header}-mobile ${openNavigation ? "no-padding" : ""}`}>
         <div className="header_logo">
-          <img src="/images/logo_ison.png" alt="Ison Homepage" />
+          <a href="/">
+            <img src="/images/logo_ison.png" alt="Ison Homepage" />
+          </a>
         </div>
         <div
           className="header_navigation-hamburger"
@@ -85,11 +119,32 @@ const Header = () => {
                 </a>
               </div>
               <div>
-                <a href="/film-tv-productions">{t(EHeader.Projects)}</a>
+                <a href="/projects">{t(EHeader.Projects)}</a>
               </div>
-              <div>
-                <a href="/">{t(EHeader.Contact)}</a>
+              <div
+                style={{
+                  paddingBottom: "6vh",
+                }}
+                onClick={() => onChangePage("contact")}
+                key={"contact"}
+              >
+                <div className="contact-header">{t(EHeader.Contact)}</div>
               </div>
+              <span
+                onClick={() => onChangeLanguage("en")}
+                style={{
+                  marginRight: 15,
+                  fontSize: "1.5rem",
+                }}
+              >
+                eng
+              </span>{" "}
+              <span
+                onClick={() => onChangeLanguage("rs")}
+                style={{ marginLeft: 15, fontSize: "1.5rem" }}
+              >
+                srb
+              </span>
             </div>
           </div>
         )}

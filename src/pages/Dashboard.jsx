@@ -1,17 +1,22 @@
-const Dasboard = () => {
-  // const { t, i18n } = useTranslation();
+import { useState } from "react";
 
-  // const onChangeLanguage = () => {
-  //   // Ovo je samo primer, treba da se prepravi
-  //   // Treba da se napravi i neko pocetno ucitavanje gde ce vuci iz
-  //   // local storage, cookia ili sesije koji je jezik trenutno
-  //   i18n.changeLanguage(i18n.language === 'en' ? 'rs' : 'en');
-  // };
+function getRandom(list) {
+  return list[Math.floor(Math.random() * list.length)];
+}
+const videos = [
+  "/images/stock.m4v",
+  "/images/stock2.m4v",
+  "/images/stock3.m4v",
+  "/images/stock4.m4v",
+  "/images/stock5.m4v",
+];
+const Dasboard = () => {
+  const [video, _setVideo] = useState(getRandom(videos));
 
   return (
     <div className="dashboard">
       <video className="dashboard-video" autoPlay muted loop>
-        <source src="/images/stock.mp4" type="video/mp4" />
+        <source src={video} type="video/mp4" />
       </video>
       <div className="overlay"></div>
 

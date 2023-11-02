@@ -1,7 +1,8 @@
 .about-us {
   width: 100%;
-  color: $black;
+  color: $white;
   display: block;
+  background-color: #191a1c;
 
   .about-us-all-page {
     display: block;
@@ -10,20 +11,19 @@
     .about-us-baner-homepage {
       text-align: center;
       font-weight: bold;
-      font-style: italic;
       font-size: 2rem;
     }
     .about-us-title-homepage {
       padding-top: 5vh;
       text-align: center;
-      font-weight: bold;
-      font-size: 3rem;
+    }
+    & img {
+      width: 40vw;
     }
     .about-us-baner {
       padding-top: 5vh;
       text-align: center;
       font-weight: bold;
-      font-style: italic;
       font-size: 2rem;
     }
     .about-us-title {
@@ -65,7 +65,7 @@
     }
 
     .partneri .partneri-logovi button img {
-      width: 80%;
+      width: 70%;
       height: auto;
     }
 
@@ -94,10 +94,11 @@
         display: block;
         width: 60vw;
         text-align: left;
-        padding-top: 5vh;
+        padding-top: 1vh;
         height: 74vh;
         .about-us-right-all-text {
           height: auto;
+          font-size: 1rem;
           .about-us-right-title {
             font-size: 2rem;
             font-family: "Montserrat";
@@ -126,20 +127,8 @@
   }
 }
 
-@media only screen and (max-height: 650px) {
-  .about-us {
-    .ison-background {
-      height: 280vh;
-    }
-  }
-}
-
 @media only screen and (max-height: 700px) {
   .about-us {
-    .ison-background {
-      padding-top: 70vh;
-      height: 250vh;
-    }
     .about-us-all-page {
       height: auto;
       .about-us-page {
@@ -153,12 +142,6 @@
           height: auto;
           .about-us-right-all-text {
             height: auto;
-            .about-us-right-title {
-              font-size: 1.5rem;
-            }
-            .about-us-right-text {
-              font-size: 1rem;
-            }
           }
           .about-us-right-box {
             height: auto;
@@ -175,24 +158,41 @@
 
 @media only screen and (max-width: 912px) {
   .about-us {
-    .ison-background {
-      padding-top: 60vh;
-      display: none;
-    }
-
     .about-us-all-page {
       height: auto;
       padding-bottom: 5vh;
+      .about-us-title {
+        margin-left: 5%;
+        width: 90%;
+        font-size: 2.5rem;
+      }
+      .about-us-video {
+        margin-left: 5vw;
+        width: 90vw;
+      }
+      .about-us-baner {
+        padding-top: 8vh;
+        width: 90%;
+        margin-left: 5%;
+      }
+
+      .partneri {
+        margin-left: 5vw;
+        width: 90vw;
+      }
       .about-us-page {
         display: block;
 
-        padding-top: 20vh;
+        padding-top: 5vh;
         .about-us-left {
           width: 100%;
           .ison-about-us-left {
+            padding-left: 15%;
+            width: 70%;
             height: auto;
           }
         }
+
         .about-us-right {
           padding-left: 10%;
           width: 80%;
@@ -232,15 +232,10 @@
   }
 }
 
-@media only screen and (max-height: 550px) {
+@media only screen and (max-height: 450px) {
   .about-us {
-    .ison-background {
-      display: none;
-    }
     .about-us-all-page {
-      .about-us-page {
-        padding-top: 40vh;
-      }
+      padding-top: 40vh;
     }
   }
 }
